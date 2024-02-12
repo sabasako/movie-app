@@ -14,28 +14,27 @@ const config: Config = {
       height: {
         "92vh": "92vh",
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+      backgroundImage: {},
       colors: {
         pureWhite: "var(--color-pure-white)",
         red: "var(--color-red)",
         darkBlue: "var(--color-dark-blue)",
         greyishBlue: "var(--color-greyish-blue)",
         semiDarkBlue: "var(--color-semi-dark-blue)",
+        backgroundImage: "var(--color-background-image)",
       },
       spacing: {
         "960": "60rem",
+        "1664": "154rem",
       },
     },
     screens: {
       "2xl": { max: "1535px" },
       xl: { max: "1279px" },
-      lg: { max: "1023px" },
+      lg: { max: "920px" },
       md: { max: "767px" },
       sm: { max: "639px" },
+      xs: { max: "500px" },
     },
   },
   plugins: [],

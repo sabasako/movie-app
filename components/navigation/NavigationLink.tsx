@@ -5,21 +5,29 @@ import { usePathname } from "next/navigation";
 
 interface NavigationLinkProps {
   href: string;
-  children: React.ReactNode;
+  content: string;
 }
 
-export default function NavigationLink({
-  href,
-  children,
-}: NavigationLinkProps) {
+export default function NavigationLink({ href, content }: NavigationLinkProps) {
   const path = usePathname();
+  const activeLink = path === href;
 
   return (
     <Link
       href={href}
-      className={`group ${path === href ? "activeLink" : ""} cursor-pointer`}
+      className={`group ${!activeLink ? "cursor-pointer" : "cursor-auto"}`}
     >
-      {children}
+      <svg className="size-5" xmlns="http://www.w3.org/2000/svg">
+        <path
+          className={`${
+            activeLink ? "" : "group-hover:fill-red"
+          } transition-all duration-300 ease-in-out ${
+            activeLink ? "fill-pureWhite" : ""
+          }`}
+          d={content}
+          fill="#5A698F"
+        />
+      </svg>
     </Link>
   );
 }
