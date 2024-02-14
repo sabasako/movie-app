@@ -1,26 +1,14 @@
-"use client";
+import HomeClient from "@/components/pages/home/HomeClient";
 
-import movieData from "@/data.json";
-import Search from "@/components/search/Search";
-import SearchContextProvider from "@/store/search-context";
-import MovieContainer from "@/components/movies/MovieContainer";
-import TrendingContainer from "@/components/movies/TrendingContainer";
+export const metadata = {
+  title: "Home",
+  description: "Home page",
+};
 
-export default function Home() {
-  const recommendedMovies = movieData.filter(
-    (movie) => movie.isTrending === false
-  );
-  const trendingMovies = movieData.filter((movie) => movie.isTrending === true);
-
+export default function HomePage() {
   return (
-    <SearchContextProvider>
-      <Search />
-      <TrendingContainer movies={trendingMovies} />
-      <MovieContainer
-        heading="Recommended for you"
-        movies={recommendedMovies}
-        allMovies={movieData}
-      />
-    </SearchContextProvider>
+    <>
+      <HomeClient />
+    </>
   );
 }

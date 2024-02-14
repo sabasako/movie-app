@@ -1,5 +1,4 @@
 import Image from "next/image";
-import movieImage from "@/public/assets/thumbnails/beyond-earth/regular/large.jpg";
 import PlayButton from "./PlayButton";
 import BookMark from "./Bookmark";
 import Description from "./Description";
@@ -11,9 +10,11 @@ interface MovieProps {
   rating: string;
   category: string;
   year: number;
+  id: string;
 }
 
 export default function Movie({
+  id,
   imageSrc,
   title,
   isBookmarked,
@@ -32,7 +33,7 @@ export default function Movie({
           height={348}
         />
         <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-stone-800 via-stone-800/50 to-transparent">
-          <BookMark isBookmarked={isBookmarked} />
+          <BookMark id={id} isBookmarked={isBookmarked} />
           <PlayButton />
         </div>
       </div>

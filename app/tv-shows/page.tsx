@@ -1,18 +1,14 @@
-"use client";
+import TvShowsClient from "@/components/pages/tvshows/TvShowsClient";
 
-import movieData from "@/data.json";
-import Search from "@/components/search/Search";
-import SearchContextProvider from "@/store/search-context";
-import MovieContainer from "@/components/movies/MovieContainer";
-import TrendingContainer from "@/components/movies/TrendingContainer";
+export const metadata = {
+  title: "TV Shows",
+  description: "Watch your favorite TV shows",
+};
 
 export default function Home() {
-  const movies = movieData.filter((movie) => movie.category === "TV Series");
-
   return (
-    <SearchContextProvider>
-      <Search />
-      <MovieContainer heading="TV Series" movies={movies} />
-    </SearchContextProvider>
+    <>
+      <TvShowsClient />
+    </>
   );
 }

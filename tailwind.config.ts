@@ -13,6 +13,7 @@ const config: Config = {
       },
       height: {
         "92vh": "92vh",
+        "100vh": "100vh",
       },
       backgroundImage: {},
       colors: {
@@ -37,6 +38,6 @@ const config: Config = {
       xs: { max: "500px" },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;

@@ -16,4 +16,5 @@ export interface MovieCl {
   rating: string;
   isBookmarked: boolean;
   isTrending: boolean;
+  id: string;
 }

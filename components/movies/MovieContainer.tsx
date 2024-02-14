@@ -2,7 +2,6 @@ import { MovieCl } from "@/classes/classes";
 import Movie from "./Movie";
 import { useContext } from "react";
 import { SearchContext } from "@/store/search-context";
-import NoMoviesFound from "../svgs/NoMoviesFound";
 
 interface MovieContainerProps {
   movies: MovieCl[];
@@ -38,6 +37,20 @@ export default function MovieContainer({
     );
   }
 
+  function handleDisplayHeading() {
+    if (
+      searchValue === "" &&
+      !displayWhileSearching &&
+      searchedMovies.length === 0
+    ) {
+      return `You don't have ${heading}`;
+    }
+    if (searchValue === "") {
+      return heading;
+    }
+    return `Found ${searchedMovies.length} results for "${searchValue}"`;
+  }
+
   if (
     displayWhileSearching ||
     (!displayWhileSearching &&
@@ -47,9 +60,7 @@ export default function MovieContainer({
     return (
       <section>
         <h1 className="mt-16 mb-8 text-4xl text-pureWhite xs:mt-12 xs:mb-6 xs:text-2xl">
-          {searchValue === ""
-            ? heading
-            : `Found ${searchedMovies.length} results for "${searchValue}"`}
+          {handleDisplayHeading()}
         </h1>
 
         <div className="grid grid-cols-4 gap-8 xl:grid-cols-3 sm:grid-cols-2 xs:gap-4">
@@ -66,6 +77,7 @@ export default function MovieContainer({
               title={movie.title}
               year={movie.year}
               key={movie.title + movie.year + movie.category}
+              id={movie.id}
             />
           ))}
         </div>
@@ -98,6 +110,7 @@ export default function MovieContainer({
               title={movie.title}
               year={movie.year}
               key={movie.title + movie.year + movie.category}
+              id={movie.id}
             />
           ))}
         </div>

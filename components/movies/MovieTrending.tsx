@@ -10,6 +10,7 @@ interface MovieProps {
   rating: string;
   category: string;
   year: number;
+  id: string;
 }
 
 export default function MovieTrending({
@@ -19,6 +20,7 @@ export default function MovieTrending({
   rating,
   category,
   year,
+  id,
 }: MovieProps) {
   return (
     <div className="relative cursor-pointer group">
@@ -37,7 +39,7 @@ export default function MovieTrending({
           category={category}
           year={year}
         />{" "}
-        <BookMark isBookmarked={isBookmarked} />
+        <BookMark id={id} isBookmarked={isBookmarked} />
         <PlayButton />
       </div>
     </div>

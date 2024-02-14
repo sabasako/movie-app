@@ -5,29 +5,10 @@ import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 // import imageByIndex from "@/util/ImageByIndex";
 import MovieTrending from "../movies/MovieTrending";
-
-interface Movie {
-  title?: string;
-  thumbnail?: {
-    trending?: {
-      small?: string;
-      large?: string;
-    };
-    regular?: {
-      small?: string;
-      medium?: string;
-      large?: string;
-    };
-  };
-  year?: number;
-  category?: string;
-  rating?: string;
-  isBookmarked?: boolean;
-  isTrending?: boolean;
-}
+import { MovieCl } from "@/classes/classes";
 
 type PropType = {
-  movies: Movie[];
+  movies: MovieCl[];
   options?: EmblaOptionsType;
 };
 export default function EmblaCarousel({ movies, options }: PropType) {
@@ -54,6 +35,7 @@ export default function EmblaCarousel({ movies, options }: PropType) {
                   "Movie" + movie?.year + movie?.category ||
                   "Movie"
                 }
+                id={movie.id}
               />
             </div>
           ))}
