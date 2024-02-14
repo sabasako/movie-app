@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Entertainment web app
 
-## Getting Started
+This is a solution to this [challenge](https://www.frontendmentor.io/challenges/entertainment-web-app-J-UhgAW1X).
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+  - [Built with](#built-with)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Movie-themed web app built with Next.js, TypeScript, and Tailwind CSS. The app's main purpose is to provide users with an interface to browse and bookmark their favorite movies and TV shows.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Screenshot
 
-## Learn More
+#### Desktop
 
-To learn more about Next.js, take a look at the following resources:
+![](/public/website-preview/desktop-preview.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Mobile
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![](/public/website-preview/mobile-preview.png)
 
-## Deploy on Vercel
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Repository URL: [Add solution URL here](https://github.com/sabasako/movie-app.git)
+- Live Site URL: [Add live site URL here](https://sako-movie.vercel.app/)
+
+### Built with
+
+- Next JS (App router)
+- Tailwind CSS
+- Typescript
