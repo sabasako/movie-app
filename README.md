@@ -19,18 +19,16 @@ Movie-themed web app built with Next.js, TypeScript, and Tailwind CSS. The app's
 
 #### Desktop
 
-![](/public/website-preview/desktop-preview.png)
+<img src="/public/website-preview/desktop-preview.png" width="600" height="auto">
 
 #### Mobile
 
-![](/public/website-preview/mobile-preview.png)
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+<img src="/public/website-preview/mobile-preview.png" width="300" height="auto">
 
 ### Links
 
-- Repository URL: [Add solution URL here](https://github.com/sabasako/movie-app.git)
-- Live Site URL: [Add live site URL here](https://sako-movie.vercel.app/)
+- [Repository URL](https://github.com/sabasako/movie-app.git)
+- [Live Site URL](https://sako-movie.vercel.app/)
 
 ### Built with
 
