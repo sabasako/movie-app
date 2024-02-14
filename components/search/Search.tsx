@@ -1,4 +1,11 @@
+"use client";
+
+import { useContext } from "react";
+import { SearchContext } from "@/store/search-context";
+
 export default function Search() {
+  const { handleSearch } = useContext(SearchContext);
+
   return (
     <div className="flex items-center justify-center w-full h-20 gap-6 rounded-xl bg-darkBlue">
       <label htmlFor="search">
@@ -15,6 +22,7 @@ export default function Search() {
         </svg>
       </label>
       <input
+        onChange={(e) => handleSearch(e.target.value)}
         className="w-full h-12 py-8 text-xl bg-darkBlue focus:outline-none focus:border-b focus:border-greyishBlue text-pureWhite caret-rose-900"
         type="text"
         id="search"

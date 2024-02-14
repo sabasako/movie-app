@@ -3,7 +3,6 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import "./carousel.css";
 import Navigation from "@/components/navigation/Navigation";
-import Search from "@/components/search/Search";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -22,7 +21,6 @@ export default function RootLayout({
       <body className={`${outfit.className} bg-darkBlue flex lg:block`}>
         <Navigation />
         <main className="flex flex-col w-full my-8 mr-8 lg:m-8 lg:w-auto xs:m-4">
-          <Search />
           {children}
         </main>
       </body>

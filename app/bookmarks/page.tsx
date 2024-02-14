@@ -1,7 +1,12 @@
-import Movie from "@/components/movies/Movie";
-import movieData from "@/data.json";
+"use client";
 
-export default function Page() {
+import movieData from "@/data.json";
+import Search from "@/components/search/Search";
+import SearchContextProvider from "@/store/search-context";
+import MovieContainer from "@/components/movies/MovieContainer";
+import TrendingContainer from "@/components/movies/TrendingContainer";
+
+export default function Home() {
   const bookmarkedTvShows = movieData.filter(
     (movie) => movie.category === "TV Series" && movie.isBookmarked
   );
@@ -9,44 +14,27 @@ export default function Page() {
     (movie) => movie.category === "Movie" && movie.isBookmarked
   );
 
+  const allBookmarked = [...bookmarkedMovies, ...bookmarkedTvShows];
+
   return (
-    <>
-      <section>
-        <h2 className="mt-6 mb-8 text-4xl text-pureWhite xs:mt-12 xs:mb-6 xs:text-2xl">
-          Bookmarked Movies
-        </h2>
-        <div className="grid grid-cols-4 gap-8 xl:grid-cols-3 sm:grid-cols-2 xs:gap-4">
-          {bookmarkedMovies.map((movie) => (
-            <Movie
-              imageSrc={movie.thumbnail.regular.large}
-              category={movie.category}
-              isBookmarked={movie.isBookmarked}
-              rating={movie.rating}
-              title={movie.title}
-              year={movie.year}
-              key={movie.title + movie.year + movie.category}
-            />
-          ))}
-        </div>
-      </section>
-      <section>
-        <h2 className="mt-12 mb-8 text-4xl text-pureWhite xs:mt-12 xs:mb-6 xs:text-2xl">
-          TV Series
-        </h2>
-        <div className="grid grid-cols-4 gap-8 xl:grid-cols-3 sm:grid-cols-2 xs:gap-4">
-          {bookmarkedTvShows.map((movie) => (
-            <Movie
-              imageSrc={movie.thumbnail.regular.large}
-              category={movie.category}
-              isBookmarked={movie.isBookmarked}
-              rating={movie.rating}
-              title={movie.title}
-              year={movie.year}
-              key={movie.title + movie.year + movie.category}
-            />
-          ))}
-        </div>
-      </section>
-    </>
+    <SearchContextProvider>
+      <Search />
+      <MovieContainer
+        displayWhileSearching={false}
+        heading="Bookmarked Movies"
+        movies={bookmarkedMovies}
+      />
+      <MovieContainer
+        displayWhileSearching={false}
+        heading="Bookmarked TV Series"
+        movies={bookmarkedTvShows}
+      />
+      <MovieContainer
+        displayWhileSearching={false}
+        displayWhileSearchingBookmark={true}
+        heading="Bookmarked TV Series"
+        movies={allBookmarked}
+      />
+    </SearchContextProvider>
   );
 }
