@@ -4,7 +4,7 @@ import NavigationLink from "./NavigationLink";
 
 export default function Navigation() {
   return (
-    <header className="p-8 h-dvh lg:h-auto lg:pb-0 xs:p-0 xs:bg-semiDarkBlue">
+    <header className="fixed z-50 p-8 h-dvh lg:h-auto lg:pb-0 xs:p-0 xs:bg-semiDarkBlue lg:static">
       <nav className="grid items-center justify-center w-24 h-full gap-16 p-5 rounded-lg justify-items-center grid-rows-headerLayout bg-semiDarkBlue lg:flex lg:w-full lg:h-24 lg:justify-between xs:gap-0 xs:py-0 xs:h-16">
         <svg
           className="w-8 h-7 xs:w-6 xs:h-5"

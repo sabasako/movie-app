@@ -11,10 +11,6 @@ const config: Config = {
       gridTemplateRows: {
         headerLayout: "1fr 5fr auto",
       },
-      height: {
-        "92vh": "92vh",
-        "100vh": "100vh",
-      },
       backgroundImage: {},
       colors: {
         pureWhite: "var(--color-pure-white)",
@@ -27,6 +23,8 @@ const config: Config = {
       spacing: {
         "960": "60rem",
         "1664": "154rem",
+        "92vh": "92vh",
+        "100vh": "100vh",
       },
     },
     screens: {

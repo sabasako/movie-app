@@ -10,6 +10,7 @@
     --color-greyish-blue: #5a698f;
     --color-semi-dark-blue: #161d2f;
     --color-background-image: #cbd5e131;
+    background-color: var(--color-dark-blue);
   }
   *,
   *::before,
