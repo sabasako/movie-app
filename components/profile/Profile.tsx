@@ -3,7 +3,7 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 export default function Profile() {
   return (
     <header
-      style={{ display: "flex", justifyContent: "space-between", padding: 20 }}
+      style={{ display: "flex", justifyContent: "space-between", padding: 0 }}
     >
       <SignedIn>
         <UserButton
@@ -16,7 +16,11 @@ export default function Profile() {
         />
       </SignedIn>
       <SignedOut>
-        <SignInButton />
+        <SignInButton>
+          <button className="text-red hover:opacity-70 transition-all duration-300">
+            Sign In
+          </button>
+        </SignInButton>
       </SignedOut>
     </header>
   );

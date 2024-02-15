@@ -13,6 +13,25 @@ export const metadata: Metadata = {
   description: "Movie app built with Next.js, Typescript and Tailwind CSS",
 };
 
+const localization = {
+  signIn: {
+    start: {
+      actionLink: "Sign up",
+      subtitle: "",
+      title: "Login",
+      actionText: "Don’t have an account?",
+    },
+  },
+  signUp: {
+    start: {
+      actionLink: "Login",
+      actionText: "Already have an account?",
+      subtitle: "",
+      title: "Sign Up",
+    },
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,6 +42,7 @@ export default function RootLayout({
       appearance={{
         baseTheme: dark,
       }}
+      localization={localization}
     >
       <html lang="en">
         <body
