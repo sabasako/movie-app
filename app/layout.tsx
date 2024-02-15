@@ -48,7 +48,7 @@ export default function RootLayout({
         <body
           className={`${outfit.className} flex bg-darkBlue m-0 lg:flex-col`}
         >
-          <Navigation />
+          <Navigation /> {/* Navigation component */}
           <main className="flex flex-col w-full my-8 ml-40 mr-8 lg:m-8 lg:w-auto xs:m-4">
             {children}
           </main>
